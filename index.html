@@ -1,263 +1,285 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Anupam's Portfolio</title>
+  <title>Anupam Chaubey — Java Backend Developer</title>
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&family=Edu+SA+Hand:wght@400..700&family=Delius&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-sV3H5kMdZ4OzDGC06JIpOtrRjFtOK/kWa/lsmbcXsAFfRFaN52aMkhKZsQxU/v1kzST09bMNZpu/1jqMGk7mug==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<canvas id="bubble-bg"></canvas>
-  <div id="content-wrapper">
 
+  <!-- Navigation -->
   <nav>
-    <div class="container">
-      <div class="logo">Anupam Chaubey</div>
-      <ul>
+    <div class="nav-container">
+      <a href="#" class="logo">AC<span>.</span></a>
+      <ul class="nav-links">
         <li><a href="#about">About</a></li>
+        <li><a href="#opensource">Open Source</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#resume">Resume</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button id="theme-toggle">🌗</button>
+      <button id="theme-toggle" aria-label="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
     </div>
   </nav>
 
-  <header>
-    <img src="images/profile.jpeg" alt="Anupam Chaubey" class="hero-img" />
-    <h1>Hi, I'm Anupam 👋</h1>
-    <p>Full-Stack Java Developer | Java | Spring Boot | MongoDB</p>
-    <a href="resume.pdf" target="_blank">
-      <button class="resume-btn">Download Resume</button>
-    </a>
-    <div class="scroll-indicator">↓</div>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <span class="hero-greeting">Hi, my name is</span>
+        <h1>Anupam Chaubey.</h1>
+        <h2>I build secure, scalable Java backend systems.</h2>
+        <p class="hero-description">
+          Java Backend Developer specializing in Spring Boot, Spring Security, and RESTful APIs. Passionate about open source contributions and building robust cloud-backed applications.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">Featured Projects</a>
+          <a href="resume.pdf" target="_blank" class="btn btn-outline">View Resume</a>
+        </div>
+      </div>
+      <div class="hero-img-container">
+        <img src="images/profile.jpeg" alt="Anupam Chaubey" class="hero-img" />
+      </div>
+    </div>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I'm Anupam Chaubey, a B.Tech CSE student at Galgotias University (2027 batch). Passionate about full-stack development, I specialize in Java, Spring Boot, MongoDB, and building real-world backend services. I enjoy creating clean, modular applications and actively solving DSA problems on LeetCode (500+ solved).<br><br>
-      I'm currently expanding my knowledge in frontend frameworks and deploying projects on platforms like Netlify and Render.
-    </p>
-  </section>
-
-  <section id="projects">
-  <h2>Projects</h2>
-  <div class="project-grid">
-    <div class="card">
-      <div class="card-inner">
-        <div class="card-front"><h3>DailyBook</h3></div>
-        <div class="card-back">
-          <p>Spring Boot + MongoDB backend for blogging website. Features include role-based access, REST APIs, JWT Authentication, Pagination, upload image support(used Cloudinary), filter and search functionality, etc.<br/>
-          <a href="https://daily-book.netlify.app" target="_blank">Chech it live !</a></p>
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="section-container">
+      <h2 class="section-title"><span class="section-number">01.</span> About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a B.Tech student specializing in Java backend development using Spring Boot and Spring Security. I enjoy building secure, scalable RESTful systems and contributing to real-world open-source projects.
+          </p>
+          <p>
+            I actively solve DSA problems on LeetCode and GeeksforGeeks with strong foundations in data structures and algorithms. Currently expanding my expertise in Advanced Spring Security, System Design, and Docker/CI-CD workflows.
+          </p>
+        </div>
+        <div class="about-highlights">
+          <h3>Quick Facts</h3>
+          <ul>
+            <li><i class="fa-solid fa-graduation-cap"></i> B.Tech CSE (Galgotias University)</li>
+            <li><i class="fa-solid fa-code-merge"></i> Open Source Contributor</li>
+            <li><i class="fa-solid fa-code"></i> 900+ LeetCode Problems Solved</li>
+            <li><i class="fa-solid fa-location-dot"></i> Based in India</li>
+          </ul>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="card">
-      <div class="card-inner">
-        <div class="card-front"><h3>To-Do List</h3></div>
-        <div class="card-back">
-          <p>Java application using file handling and Java Collections for managing tasks. Modular design via OOP.<br/>
-          <a href="https://github.com/lostannu/To-Do-List" target="_blank">View on GitHub</a></p>
+  <!-- Open Source Contributions Section (Set to exactly 2) -->
+  <section id="opensource" class="section">
+    <div class="section-container">
+      <h2 class="section-title"><span class="section-number">02.</span> Open Source Contributions</h2>
+      <div class="os-grid">
+        
+        <!-- Contribution 1 -->
+        <div class="os-card">
+          <div class="os-header">
+            <div class="os-title-group">
+              <h3>OpenAPI Generator <span class="badge">26k+ ⭐</span></h3>
+              <span class="os-status">Merged PR</span>
+            </div>
+            <i class="fa-brands fa-github os-icon"></i>
+          </div>
+          <p class="os-description">
+            Preserve underscores in enum names for Java clients to maintain SCREAMING_SNAKE_CASE values, fixing a critical bug in the OpenAPI Generator.
+          </p>
+          <ul class="os-highlights">
+            <li>Interacted with maintainers to address feedback and improve the implementation.</li>
+            <li>Added targeted regression test suites.</li>
+          </ul>
+          <div class="os-link-container">
+            <a href="https://github.com/OpenAPITools/openapi-generator/pull/23842" target="_blank" class="os-link">View Merged PR →</a>
+          </div>
+        </div>
+
+        <!-- Contribution 2 (Template - change details as needed) -->
+        <div class="os-card">
+          <div class="os-header">
+            <div class="os-title-group">
+              <h3>dbeaver <span class="badge">51k+ ⭐</span></h3>
+              <span class="os-status">Merged PR</span>
+            </div>
+            <i class="fa-brands fa-github os-icon"></i>
+          </div>
+          <p class="os-description">
+            Fixed a regression where clicking column headers to sort result sets would fail or break due to dataFilter.setOrder(null) executing unconditionally on every click.
+          </p>
+          <ul class="os-highlights">
+            <li>Restricted dataFilter.setOrder(null) to execute only when initializing a new column sort order (constraint.getOrderPosition() == 0), preventing it from wiping state during toggles or resets.</li>
+            <li>Improved via taking feedback from the community</li>
+          </ul>
+          <div class="os-link-container">
+            <a href="https://github.com/dbeaver/dbeaver/pull/41782" target="_blank" class="os-link">View Merged PR →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section (Set to exactly 3) -->
+  <section id="projects" class="section">
+    <div class="section-container">
+      <h2 class="section-title"><span class="section-number">03.</span> Featured Projects</h2>
+      <div class="project-grid">
+        
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div>
+            <div class="project-header">
+              <i class="fa-regular fa-folder-closed project-folder"></i>
+              <div class="project-links">
+                <a href="https://github.com/anupamchaubey/Campus-Connect" target="_blank" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <h3>Campus-Connect</h3>
+            <p class="project-subtitle">University networking & resource-sharing platform.</p>
+            <p class="project-desc">Enables students to share notes, PYQs, and interview experiences with full admin moderation, JWT role-based access, and Cloudinary storage.</p>
+          </div>
+          <ul class="project-tech-list">
+            <li>Java 17</li>
+            <li>Spring Boot</li>
+            <li>Spring Security</li>
+            <li>JWT</li>
+            <li>MySQL</li>
+          </ul>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div>
+            <div class="project-header">
+              <i class="fa-regular fa-folder-closed project-folder"></i>
+              <div class="project-links">
+                <a href="https://github.com/anupamchaubey/Taskify" target="_blank" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <h3>Taskify</h3>
+            <p class="project-subtitle">Secure personal task management REST service.</p>
+            <p class="project-desc">Provides isolated task CRUD operations via stateless JWT filtering, custom exception handling, and bean validation.</p>
+          </div>
+          <ul class="project-tech-list">
+            <li>Java</li>
+            <li>Spring Boot</li>
+            <li>Spring Security</li>
+            <li>JWT</li>
+            <li>MySQL</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="section-container">
+      <h2 class="section-title"><span class="section-number">04.</span> Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Languages</h3>
+          <p>Java, SQL</p>
+        </div>
+        <div class="skill-category">
+          <h3>Backend & APIs</h3>
+          <p>Spring Boot, Spring Security, Spring Data JPA, Hibernate, REST APIs</p>
+        </div>
+        <div class="skill-category">
+          <h3>Auth & Security</h3>
+          <p>JWT, BCrypt, RBAC (Role-Based Access Control)</p>
+        </div>
+        <div class="skill-category">
+          <h3>Databases & Cloud</h3>
+          <p>MySQL, H2, Cloudinary, Render, Railway, Vercel</p>
+        </div>
+        <div class="skill-category">
+          <h3>API Docs & Tools</h3>
+          <p>Swagger / OpenAPI, Git, GitHub, Maven, Postman, IntelliJ IDEA</p>
+        </div>
+        <div class="skill-category">
+          <h3>Currently Learning</h3>
+          <p>Advanced Spring Security, System Design, Docker, GitHub Actions</p>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="card">
-      <div class="card-inner">
-        <div class="card-front"><h3>Mini Social Media</h3></div>
-        <div class="card-back">
-          <p>Developing a lightweight social media platform featuring user posts, likes, comments, and real-time updates. Built with ReactJS and Spring Boot.<br/>
-          <a href="https://github.com/anupamchaubey/minisocial" target="_blank">View on GitHub (coming soon)</a></p>
+  <!-- Resume Section -->
+  <section id="resume" class="section">
+    <div class="section-container">
+      <h2 class="section-title"><span class="section-number">05.</span> Resume</h2>
+      <div class="resume-card">
+        <div class="resume-card-info">
+          <i class="fa-regular fa-file-pdf resume-file-icon"></i>
+          <div>
+            <h3>Anupam_Chaubey_Resume.pdf</h3>
+            <p>Updated with full project details, education, and open source history.</p>
+          </div>
+        </div>
+        <div class="resume-card-actions">
+          <a href="resume.pdf" target="_blank" class="btn btn-outline">View Resume</a>
+          <a href="resume.pdf" download class="btn btn-primary"><i class="fa-solid fa-download"></i> Download PDF</a>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skill"><h3>Programming</h3><p>Java, Python </p></div>
-    <div class="skill"><h3>Backend</h3><p>Spring Boot, Spring Security, REST APIs, MVC Architecture, JWT, JPA, Docker</p></div>
-    <div class="skill"><h3>Frontend</h3><p>HTML, CSS, JavaScript , Responsive Design, ReactJS</p></div>
-    <div class="skill"><h3>Databases</h3><p>MongoDB, MySQL </p></div>
-    <div class="skill"><h3>Tools & Platforms</h3><p>Git, GitHub, IntelliJ, Eclipse, Netlify, Render, Railway, Cloudinary</p></div>
   </section>
 
-  <section id="resume">
-    <h2>My Resume</h2>
-    <p>You can view or download my resume below:</p>
-    <div style="margin: 20px 0; border: 2px solid #fca311; border-radius: 8px; overflow: hidden;">
-      <iframe src="resume.pdf" width="100%" height="600px" style="border: none;"></iframe>
-    </div>
-    <a href="resume.pdf" download class="resume-btn">📄 Download Resume (PDF)</a>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <div class="contact-info">
-      <p><a href="mailto:icyanupam@gmail.com">Email</a></p>
-      <p><a href="https://linkedin.com/in/anupamchaubey" target="_blank">LinkedIn</a></p>
-      <p><a href="https://github.com/anupamchaubey" target="_blank">GitHub</a></p>
-      <p><a href="https://leetcode.com/u/lostannu/">Leetcode</a></p>
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <div class="section-container">
+      <h2 class="section-title"><span class="section-number">06.</span> Get In Touch</h2>
+      <p>I'm always open to discussions about Java, backend engineering, system design, and open source. My inbox is always open!</p>
+      <a href="mailto:icyanupam@gmail.com" class="btn btn-primary contact-btn">Say Hello</a>
+      
+      <div class="social-links">
+        <a href="https://linkedin.com/in/anupamchaubey" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/anupamchaubey" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://leetcode.com/u/anupamchaubey/" target="_blank" aria-label="LeetCode"><i class="fa-solid fa-code"></i></a>
+        <a href="mailto:icyanupam@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
-    thanks for visiting ...
+    <p>Designed & Built by Anupam Chaubey</p>
   </footer>
 
+  <!-- Scripts -->
   <script>
-    const sections = document.querySelectorAll('section');
-    const revealOnScroll = () => {
-      sections.forEach(sec => {
-        const rect = sec.getBoundingClientRect();
-        if (rect.top < window.innerHeight * 0.8) {
-          sec.classList.add('reveal');
-        }
-      });
-    };
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('load', revealOnScroll);
-
+    // Theme Toggle Logic
     const toggleBtn = document.getElementById('theme-toggle');
+    const icon = toggleBtn.querySelector('i');
     const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
     const storedTheme = localStorage.getItem('theme');
+    
     if (storedTheme === 'light' || (!storedTheme && prefersLight)) {
       document.body.classList.add('light-mode');
+      icon.className = 'fa-solid fa-sun';
     }
+    
     toggleBtn.addEventListener('click', () => {
       document.body.classList.toggle('light-mode');
       const isLight = document.body.classList.contains('light-mode');
+      icon.className = isLight ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
       localStorage.setItem('theme', isLight ? 'light' : 'dark');
     });
-
-    (() => {
-  const canvas = document.getElementById('bubble-bg');
-  const ctx = canvas.getContext('2d');
-
-  let width, height;
-  let bubbles = [];
-  const bubbleCount = 100; 
-  const maxRadius = 20;
-
-  const mouse = {
-    x: null,
-    y: null,
-    radius: 100
-  };
-
-  function resize() {
-    width = window.innerWidth;
-    height = window.innerHeight;
-    canvas.width = width;
-    canvas.height = height;
-  }
-
-  window.addEventListener('resize', resize);
-  resize();
-
-  class Bubble {
-    constructor() {
-      this.init();
-    }
-
-    init() {
-      this.x = Math.random() * width;
-      this.y = Math.random() * height;
-      this.radius = Math.random() * maxRadius / 2 + 7;
-      this.baseRadius = this.radius;
-      this.speedX = (Math.random() - 1.5) * 0.3; // slow horizontal movement
-      this.speedY = (Math.random() - 1.5) * 0.3; // slow vertical movement
-      this.color = `rgba(125, 235, 255, ${Math.random() * 0.3 + 0.3})`; // faint white bubbles
-    }
-
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-      ctx.fillStyle = this.color;
-      ctx.fill();
-    }
-
-    update() {
-      // Move slowly
-      this.x += this.speedX;
-      this.y += this.speedY;
-
-      // Bounce off edges
-      if (this.x + this.radius > width || this.x - this.radius < 0) this.speedX *= -1;
-      if (this.y + this.radius > height || this.y - this.radius < 0) this.speedY *= -1;
-
-      // Interaction: move away from mouse
-      if (mouse.x && mouse.y) {
-        const dx = this.x - mouse.x;
-        const dy = this.y - mouse.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-
-        if (dist < mouse.radius + this.radius) {
-          // Move bubble away from cursor direction
-          const angle = Math.atan2(dy, dx);
-          const moveDist = (mouse.radius + this.radius - dist) / 5;
-
-          this.x += Math.cos(angle) * moveDist;
-          this.y += Math.sin(angle) * moveDist;
-
-          // Optional: grow bubble slightly on hover
-          this.radius = Math.min(this.baseRadius * 2.5, this.radius + 0.3);
-        } else {
-          // Shrink back to base radius gradually
-          if (this.radius > this.baseRadius) this.radius -= 0.1;
-          if (this.radius < this.baseRadius) this.radius = this.baseRadius;
-        }
-      } else {
-        // No mouse - shrink back to base radius
-        if (this.radius > this.baseRadius) this.radius -= 0.1;
-        if (this.radius < this.baseRadius) this.radius = this.baseRadius;
-      }
-
-      this.draw();
-    }
-  }
-
-  // Create bubbles
-  for (let i = 0; i < bubbleCount; i++) {
-    bubbles.push(new Bubble());
-  }
-
-  // Mouse move listener
-  window.addEventListener('mousemove', (e) => {
-    mouse.x = e.clientX;
-    mouse.y = e.clientY;
-  });
-
-  // Mouse out listener to reset mouse position
-  window.addEventListener('mouseout', () => {
-    mouse.x = null;
-    mouse.y = null;
-  });
-
-  function animate() {
-    ctx.clearRect(0, 0, width, height);
-    bubbles.forEach(bubble => bubble.update());
-    requestAnimationFrame(animate);
-  }
-
-  animate();
-})();
-
   </script>
-  
 </body>
 </html>
